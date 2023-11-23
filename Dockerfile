@@ -15,7 +15,7 @@ RUN mvn clean package
 FROM openjdk:17.0.2-jdk
 
 # Copia el archivo JAR generado desde el contenedor de compilación
-COPY --from=builder /app/target/gpds-0.0.1-SNAPSHOT.jar /app.jar
+COPY --from=builder /app/target/spring-test-0.0.1-SNAPSHOT.jar /app.jar
 
 # Expone el puerto en el que se ejecuta tu aplicación
 EXPOSE 8080
